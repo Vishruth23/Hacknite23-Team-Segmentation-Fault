@@ -22,3 +22,6 @@ Scraping was done from the official iplt20 website.
 ### **To Run the app:**
   -->Navigate to the Pyfiles/ipl_frontend folder and run "python3 manage.py runserver" in terminal
   
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A_aWvGXSAw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  
