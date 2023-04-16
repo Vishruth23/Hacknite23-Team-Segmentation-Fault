@@ -15,7 +15,7 @@ To achieve these objectives, we used various data scraping(using selenium), proc
 Scraping was done from the official iplt20 website.
 
 ### **Installation process:**
-  -->Download the zip file of the project from the github repo and extract the file.
+  -->Download the zip file of the project from the github repo and extract the file.\n
   -->Pre-requesites: Django,numpy,pandas,selenium,matplotlib. To install use "pip3 install 'module name'"
   
 ### **To Run the app:**
