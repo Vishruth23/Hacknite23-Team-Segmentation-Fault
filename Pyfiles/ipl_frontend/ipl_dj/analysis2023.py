@@ -13,7 +13,7 @@ def predictXI():
     options = ChromeOptions()
     #options.binary_location = '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'
     PATH='./chromedriver.exe'
-    options.headless=True
+    options.headless=False
 
     website = 'https://fantasy.iplt20.com/season/home?source=organic'
     ser = Service(PATH)
