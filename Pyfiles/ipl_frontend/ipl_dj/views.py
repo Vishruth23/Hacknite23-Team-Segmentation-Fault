@@ -24,8 +24,8 @@ def bestXI(request):
     return render(request,"bestXI.html",context={"data":data[0], "year": "2022", "team" : "All Teams","image1":data[1], "image2":data[2]})
  
 def predictXI(request):
-    eleven=analysis2023.predictXI()
-    return render(request,"predictXI.html",context={"data":eleven}) 
+    eleven,eleven2=analysis2023.predictXI()
+    return render(request,"predictXI.html",context={"data":eleven, "data1":eleven2}) 
 
     
     
