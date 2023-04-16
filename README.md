@@ -17,7 +17,7 @@ Scraping was done from the official iplt20 website.
 ### **Installation process:**
   -->Download the zip file of the project from the github repo and extract the file.
   
-  -->Pre-requesites: Django,numpy,pandas,selenium,matplotlib. To install use "pip3 install <module name>"
+  -->Pre-requesites: Django,numpy,pandas,selenium,matplotlib. To install use "pip3 install 'module name'"
   
 ### **To Run the app:**
   -->Navigate to the Pyfiles/ipl_frontend folder and run "python3 manage.py runserver" in terminal
