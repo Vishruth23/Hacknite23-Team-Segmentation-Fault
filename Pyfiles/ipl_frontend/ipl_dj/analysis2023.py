@@ -13,7 +13,7 @@ def predictXI():
     options = ChromeOptions()
     #options.binary_location = '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'
     PATH='./chromedriver.exe'
-    options.headless=False
+    options.headless=True
 
     website = 'https://fantasy.iplt20.com/season/home?source=organic'
     ser = Service(PATH)
@@ -30,7 +30,7 @@ def predictXI():
     tt = wd.find_elements(By.XPATH, '//div[@class="df-fix__team-name"]/span')
     team1 = tt[0].text
     team2 = tt[1].text
-
+    #print(team1,team2)
 
     df1 = pd.read_csv(f'{dirname}/2023/linkplayers.csv')
     df2 = pd.read_csv(f'{dirname}/2023/player_points_info.csv')
@@ -50,6 +50,7 @@ def predictXI():
 
     cvc= final_squad.sort_values('player_points', ascending=False,ignore_index=True)
     ctr=0
+    l2 = list(dict.values(dict(final_squad["player_name_x"])))
     for i in final_squad["player_name_x"]==cvc.at[0,"player_name_x"]:
         if(i):
             break
@@ -65,7 +66,7 @@ def predictXI():
     l = list(dict.values(dict(final_squad["player_name_x"])))
     l.append(team1)
     l.append(team2)
-    return l
+    return l,l2
     #print(l)
 
 # predictXI()
