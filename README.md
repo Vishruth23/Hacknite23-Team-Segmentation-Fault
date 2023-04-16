@@ -14,7 +14,7 @@ To achieve these objectives, we used various data scraping(using selenium), proc
 
 Scraping was done from the official iplt20 website.
 
-*Installation process:*
+_Installation process:_
   -->D
 
 
