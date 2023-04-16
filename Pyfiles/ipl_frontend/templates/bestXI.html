@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <style>
@@ -124,52 +125,74 @@
         <tr>
           <th>SLNO</th>
           <th>Player Name</th>
+          <th>Image</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
           <td>{{ data.0 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.0|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>2</td>
           <td>{{ data.1 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.1|title }}.png" height="40px"></td>
         </tr>
         <tr>
           <td>3</td>
           <td>{{ data.2 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.2|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>4</td>
           <td>{{ data.3 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.3|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>5</td>
           <td>{{ data.4 }} (WK)</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.4|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>6</td>
           <td>{{ data.5 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.5|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>7</td>
           <td>{{ data.6 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.6|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>8</td>
           <td>{{ data.7 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.7|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>9</td>
           <td>{{ data.8 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.8|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>10</td>
           <td>{{ data.9 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.9|title }}.png" height="40px"></td>
+
         </tr>
         <tr>
           <td>11</td>
           <td>{{ data.10 }}</td>
+          <td><img src="https://scores.iplt20.com/ipl/playerimages/{{ data.10|title }}.png" height="40px"></td>
+
         </tr>
 
       </tbody>
