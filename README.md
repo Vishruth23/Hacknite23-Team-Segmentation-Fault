@@ -1,4 +1,5 @@
 # Hacknite23 - Team Segmentation Fault
+Team members: Vishruth Vijay (IMT2022507) and Sathvik S Rao (IMT2022082)
 
 Aim: Our goal was to develop an IPL data analysis application that can provide valuable insights into player performance and team selection. The application generates the following outputs:
 
@@ -10,9 +11,10 @@ Aim: Our goal was to develop an IPL data analysis application that can provide v
  
   4) Radar charts for top players: Using matplotlib the app constructs a radar chart based on parameters(eg:runs,wickets etc) for the top batsman and top Bowler.
  
-To achieve these objectives, we used various data scraping(using selenium), processing and analysis techniques (using pandas).The final output will be presented in an easy-to-understand format for users to make informed decisions about team selection and player performance.
+To achieve these objectives, we used various data scraping(using selenium), processing and analysis techniques (using pandas).The final output will be presented in an easy-to-understand format for users to make informed decisions about team selection and player performance(ex: graph using matplotlib and tables using bootstrap).
 
 Scraping was done from the official iplt20 website.
+(Webscraping part can be found in the files readplayer.py, fetch_players.py, and player_stats.py all located in the ipl_dj folder)
 
 ### **Installation process:**
   -->Download the zip file of the project from the github repo and extract the file.
