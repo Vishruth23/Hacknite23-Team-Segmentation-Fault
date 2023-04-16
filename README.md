@@ -24,5 +24,6 @@ Scraping was done from the official iplt20 website.
   
 [!["IPLAnalysis Screen Recording"](http://img.youtube.com/vi/A_aWvGXSAw4/0.jpg)](http://www.youtube.com/watch?v=A_aWvGXSAw4 "IPLAnalysis Screen Recording")
 
-
+### ** Future Scope
+Fantasy ipl requires you to login to fetch the fantasy points of all the players. An otp that is sent through SMS is to be entered before we scrape the details. So before the scrapping is done we have to manually login and enter the otp to fetch the fantasy points. We plan to improve the scraping by making it completely automated without manual intervention.
   
