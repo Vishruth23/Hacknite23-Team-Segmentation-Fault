@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        
+        label{
+            display: block;
+            padding: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 1.25;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.401);
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+                    }
+        select {
+            display: block;
+            padding: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 1.25;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.401);
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            }
+
+            select:focus {
+            border-color: #007bff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+        body {
+        background-image: url("{% static 'background_image.jpg' %}");
+        background-size: cover;
+      }
+      .header {
+        background-color: rgba(51, 51, 51, 0.5);
+        color: #fff;
+        padding:2%; 
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+      }
+        .container{
+            width: 30%;
+            margin:auto;
+            background-color:rgba(255, 255, 255, 0.44);
+            
+        }
+        .contain{
+            display: flex;
+            flex-direction: row;
+            width: 30%;
+            justify-content: space-evenly;
+            margin:auto;
+            
+        }
+    </style>
+    <title>Best XI Page</title>
+  </head>
+  <body>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <div class="header"><h3>Best XI</h3></div>
+    <form action = "bestXI">
+    <div class="contain">
+    <label for="dropdown1">Year</label>
+    <select id="year-drop" name = "year" class = "form-control-solid">
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+      <option value="2018">2018</option>
+    </select>
+    
+    <br>
+    <label for="dropdown2">Team</label>
+    <select id="team-drop" name= "team" class = "form-select-outline">
+    </select>
+    <script>
+        const yr = document.getElementById("year-drop");
+      const team = document.getElementById("team-drop");
+
+      function teams() {
+        const selected_yr = parseInt(yr.value, 10);
+        let team_names = [];
+
+        if (selected_yr < 2022) {
+          team_names = ["All Teams", "CSK", "DC", "KKR", "MI", "PBKS", "RR", "RCB", "SRH"];
+        } else {
+          team_names = ["All Teams", "CSK", "DC", "GT", "KKR", "LSG", "MI", "PBKS", "RR", "RCB", "SRH"];
+        }
+
+        team.innerHTML = "";
+
+        for (let i = 0; i < team_names.length; i++) {
+          const option = document.createElement("option");
+          option.value = team_names[i];
+          option.text = team_names[i];
+          team.add(option);
+        }
+      }
+
+      yr.addEventListener("change", teams);
+      teams();
+    </script>
+    
+    <button type="submit">Submit</button>
+    </form> 
+    
+</div>
+<br>
+    <div class="container">
+        <h3>Best XI of {{ team }}, year {{ year }}</h3>
+    <table class = "table table-bordered">
+      <thead>
+        <tr>
+          <th>SLNO</th>
+          <th>Player Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>{{ data.0 }}</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>{{ data.1 }}</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>{{ data.2 }}</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>{{ data.3 }}</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>{{ data.4 }} (WK)</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>{{ data.5 }}</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>{{ data.6 }}</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>{{ data.7 }}</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>{{ data.8 }}</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>{{ data.9 }}</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>{{ data.10 }}</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    </div>
+    <div class="contain">
+    <img src="data:image/png;base64, {{ image1 }}" alt="Plot" style="opacity: 0.75; " height="fit-content" width="fit-content">
+    <img src="data:image/png;base64, {{ image2 }}" alt="Plot" style="opacity: 0.75; " height="fit-content" width="fit-content">
+</div>
+  </body>
+</html>

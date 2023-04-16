@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+      /* Body background */
+body {
+  background-image: url("{% static 'background_image.jpg' %}");
+  background-size: cover;
+}
+
+/* Header */
+.header {
+  background-color: rgba(51, 51, 51, 0.328);
+  color: rgb(43, 57, 116);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  justify-content: center;
+
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Buttons */
+.button {
+  background-color: rgb(43, 57, 116);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Button hover */
+.button:hover {
+  background-color: #3e8e41;
+}
+
+/* Add more styles as needed */
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="{% static 'ipl-logo.png' %}" height="120px">
+      <h2 > Analysed</h2>
+    </div>
+      <div class="content">
+    <form action = "bestXI">
+      <button class="button">Best XI</button>
+    </form>
+    <form action = "predictXI">
+      <button class="button">Predicted XI</button>
+    </form>
+    </div>
+  </body>
+</html>
